@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div ng-controller="commentsController">
+            <div class="postText">
+                <p>AngularJS — JavaScript-фреймворк с открытым исходным кодом. Предназначен для разработки одностраничных приложений. Его цель — расширение браузерных приложений на основе MVC шаблона, а также упрощение тестирования и разработки.
+                <br>Фреймворк работает с HTML, содержащим дополнительные пользовательские атрибуты, которые описываются директивами, и связывает ввод или вывод области страницы с моделью, представляющей собой обычные переменные JavaScript. Значения этих переменных задаются вручную или извлекаются из статических или динамических JSON-данных.
+            </div>
+            <a ng-click="state.open = !state.open">Add comment</a>
+            <br>
+          <div  ng-style="{'display': state.open ? 'none' : 'block'}">
+                <input type="text" ng-model="name" />
+                <br>
+                <textarea name="comment" ng-model="text"></textarea>
+                <button ng-click="addComment()">Add comment</button>
+          </div>
+            <div ng-repeat="comment in comments">
+                <comment content="comment"></comment>
+            </div>
+        </div>
+        <script src="js/libs/angular.js"></script>
+        <script src="js/controllers/mainController.js"></script>
+        <script src="js/directives/comment.js"></script>
+    </body>
+</html>

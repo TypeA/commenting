@@ -1,0 +1,19 @@
+<div class="comment"> 
+    <table style="width: 100%">
+        <tr>
+            <td style="text-align: left"><b>{{content.name}}</b> leaved comment at {{content.time|date:"H:mm dd.MM.yyyy"}}</td>
+            <td style="text-align: right">
+                <button id='edit'>Edit</button>
+                <button id="remove" ng-click="">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                {{content.text}}
+                <br>
+                <a href="">Reply</a>
+            </td>
+
+        </tr>
+    </table>
+</div>
