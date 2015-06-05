@@ -12,3 +12,23 @@
     border: solid 2px black;
     background: #CEE3F6;
 }
+textarea {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; 
+    height: 50px; 
+    resize: none; 
+}
+.leave-comment{
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+.opened{
+    display: block;
+}
+.edit-comment{
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}

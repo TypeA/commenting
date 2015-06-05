@@ -10,16 +10,17 @@
                 <p>AngularJS — JavaScript-фреймворк с открытым исходным кодом. Предназначен для разработки одностраничных приложений. Его цель — расширение браузерных приложений на основе MVC шаблона, а также упрощение тестирования и разработки.
                 <br>Фреймворк работает с HTML, содержащим дополнительные пользовательские атрибуты, которые описываются директивами, и связывает ввод или вывод области страницы с моделью, представляющей собой обычные переменные JavaScript. Значения этих переменных задаются вручную или извлекаются из статических или динамических JSON-данных.
             </div>
-            <a ng-click="state.open = !state.open">Add comment</a>
+            <a href="" ng-click="open()">Add comment</a>
             <br>
-          <div  ng-style="{'display': state.open ? 'none' : 'block'}">
-                <input type="text" ng-model="name" />
+          <div class="leave-comment">
+                <input type="text" ng-model="name" style="width: 80%" placeholder="Enter your name or stay anonimous">
+               <br>
+                <textarea name="comment" ng-model="text" placeholder="Enter your comment"></textarea>
                 <br>
-                <textarea name="comment" ng-model="text"></textarea>
-                <button ng-click="addComment()">Add comment</button>
+                <button ng-click="addComment();open()">Add comment</button>
           </div>
             <div ng-repeat="comment in comments">
-                <comment content="comment"></comment>
+                <comment content="comment" index="$index"></comment>
             </div>
         </div>
         <script src="js/libs/angular.js"></script>
