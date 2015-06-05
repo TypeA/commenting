@@ -1,4 +1,4 @@
-myApp.directive('comment', function() { 
+myApp.directive('comment', function(dataService) { 
   return { 
     restrict: 'E', 
     scope: { 

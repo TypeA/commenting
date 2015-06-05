@@ -3,7 +3,7 @@
         <tr>
             <td style="text-align: left"><b>{{content.name}}</b> leaved comment at {{content.time|date:"H:mm:ss dd.MM.yyyy"}}</td>
             <td style="text-align: right">
-                <button id='edit'>Edit</button>
+                <button ng-click="state.open = !state.open">Edit</button>
                 <button ng-click="content.del(index)" >Remove</button>
             </td>
         </tr>
@@ -11,11 +11,11 @@
             <td colspan="2">
                 {{content.text}}
                 <br>
-                <a href="" ng-click="$scope.open()">Reply</a>
+                <a href="" >Reply</a>
             </td>
         </tr>
     </table>
-    <div class="reply">
-        <textarea class="edit-comment" ng-model="text"></textarea>
+    <div style="display: block" ng-style="{'display': state.open ? 'block !important' :  'none'}">
+        <textarea class="edit-comment" ng-model="content.text"></textarea>
     </div>
 </div>
